@@ -30,13 +30,7 @@
             $conn->query($sql);
             $mail = new PHPMailer(true);
             //Server settings
-            $mail->isSMTP();                                           
-            $mail->Host       = 'smtp.gmail.com';                    
-            $mail->SMTPAuth   = true;                                   
-            $mail->Username   = 'courtbookingjmti@gmail.com';
-            $mail->Password   = 'hrvnimxkkhnlgehw';
-            $mail->SMTPSecure= 'ssl';
-            $mail->Port       = 465;                                    
+            $mail->isSMTP();                                                                     
             $mail->setFrom('courtbookingjmti@gmail.com', 'JMTI Court Booking');
             $mail->addAddress($user_email, $user_name);
             $mail->isHTML(true);
